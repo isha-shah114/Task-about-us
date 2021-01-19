@@ -1,0 +1,101 @@
+@import 'variable', 'grid', 'footer';
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+a { color: #1c1e1f; }
+
+.container-fluid{
+  padding-right: 0;
+  padding-left: 0;
+}
+.banner-image { 
+    height: 625px; 
+    width: 100%;
+}
+h1 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: $font-color-white;
+    font-size: 4rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 5% 0 1% 0;
+}
+
+@mixin border-bottom-color () {
+    border-bottom: 4px solid $border-color;
+}
+
+h2:after {
+    content: "";
+    width: 7%;
+    position: absolute;
+    left: 46%;
+    padding-top: 2.5%;
+    @include border-bottom-color();
+}
+
+@mixin border-radius-color () {
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    color: $font-color-black;
+}
+
+.description {
+    background: $testimonial-bg;
+    font-size: 14px;
+    line-height: 26px;
+    text-indent: 30px;
+    position: relative;
+    @include border-bottom-color();
+    @include border-radius-color();
+}
+.description:before {
+    content: "\f10d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+.title-padding {
+    margin: 0.5% 0 0 5%;
+    position: absolute;
+
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin: 0;
+    }
+    .post {
+        display: block;
+        font-size: 15px;
+    }
+    @include border-radius-color();
+}
+
+.client-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid $border-color;
+    margin: 0 5%;
+}
+
+.client-img-1 { 
+    @extend .client-img;
+    background: url("../assets/client-1.jpg") no-repeat; 
+    background-size: cover;
+}
+.client-img-2 { 
+    @extend .client-img;
+    background: url("../assets/client-2.jpeg") no-repeat; 
+    background-size: cover;
+}

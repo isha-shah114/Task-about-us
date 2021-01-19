@@ -1,0 +1,15 @@
+$font-color-white: #fff; //font color for flex-box and header tag
+$border-color:  #b2364a; //border color for whole page
+
+//flex box properties from grid.scss
+$columns: 12; //total columns of page
+$background-odd: #4e4e4e; //background color for odd flex boxes
+$background-even: pink; //background color for even flex boxes
+$box-shadow: grey; //color for shadow of flex boxes
+
+//testimonial properties
+$testimonial-bg: #e6e6e6; //background color for testimonial box
+$font-color-black: #363636; //font color for testimonial description
+
+//footer properties
+$footer-font-color: #999999; //font color for footer content

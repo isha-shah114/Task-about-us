@@ -1,0 +1,41 @@
+@import 'grid' , 'variable';
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $background-odd;
+    color: $footer-font-color;
+    margin-top: 5%;
+}
+
+h4 { color: $background-even;}
+
+.content-ml {
+    margin-left: 25%;
+}
+
+p { line-height: 24px;}
+
+ul { 
+    list-style-type: none;
+    margin-left: -15%;
+    line-height: 24px;  
+}
+.social-li { display:inline; }
+
+.social-media-icons {
+    background-color: $footer-font-color;
+    padding: 2% 3%;
+    border-radius: 5px;
+    margin: 0 2%;
+    color: $background-even;
+}
+
+.copyright {
+    background-color: $font-color-black;
+    color: $footer-font-color;
+    text-align: center;
+    width: 100%;
+}
