@@ -1,8 +1,7 @@
 //imported all partial fies required
-@import 'variable', 'grid', 'mixin', 'footer';
+@import 'variable', 'mixin', 'grid', 'footer', 'common-classes';
 
-body { 
-    margin: 0; 
+body {  
     font-family: $font-family-roboto; 
 }
 .container-fluid{
@@ -12,12 +11,10 @@ body {
 //height and width of the banner image for the page
 .banner-image { 
     height: 625px; 
-    width: 100%;
 }
 
 /***************************** Common style for the web page *****************************/
 h1 {
-    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,7 +24,6 @@ h1 {
     font-size: $font-size-60px;
 }
 h2 {
-    text-align: center;
     font-size: $font-size-30px;
     margin: 5% 0 1% 0;
 
@@ -69,8 +65,9 @@ h2 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 4px solid $border-color;
     margin: 0 5%;
+    //mixin for bottom border under h2 heading
+    @include border-bottom-color(4px, solid, $border-color);
 }
 
 .testimonial-img-1 { 
@@ -92,7 +89,6 @@ h2 {
         font-size: $font-size-24px;
         font-weight: bold;
         text-transform: capitalize;
-        margin: 0;
     }
     .post {
         display: block;

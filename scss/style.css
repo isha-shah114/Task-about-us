@@ -46,7 +46,6 @@
 .row .background-odd {
   background-color: #4e4e4e;
   color: #fff;
-  transition: 0.3s;
   border-radius: 10px;
 }
 .row .background-odd:hover {
@@ -55,7 +54,6 @@
 .row .background-even {
   background-color: pink;
   box-shadow: 5px 5px 8px grey;
-  transition: 0.3s;
 }
 .row .background-even:hover {
   box-shadow: 0 0 0;
@@ -68,7 +66,6 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
-  width: 100%;
   background-color: #4e4e4e;
   color: #999999;
   margin-top: 5%;
@@ -87,7 +84,7 @@ footer ul {
   margin-left: -15%;
   line-height: 24px;
 }
-footer ul li:hover {
+footer ul li:hover, footer ul .social-li .social-media-icons:hover, footer .social-li ul .social-media-icons:hover {
   color: pink;
   cursor: pointer;
 }
@@ -101,20 +98,31 @@ footer .social-li .social-media-icons {
   margin: 0 2%;
   color: #363636;
 }
-footer .social-li .social-media-icons:hover {
-  color: pink;
-  cursor: pointer;
-}
 footer .copyright {
   background-color: #363636;
   color: #999999;
-  text-align: center;
-  width: 100%;
 }
 
 /***************************** Footer style for the web page *****************************/
-body {
+/***************************** Common css classes for the web page *****************************/
+.m0 {
   margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.transition-4s {
+  transition: 0.4s;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+/***************************** Common css classes for the web page *****************************/
+body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
@@ -125,12 +133,10 @@ body {
 
 .banner-image {
   height: 625px;
-  width: 100%;
 }
 
 /***************************** Common style for the web page *****************************/
 h1 {
-  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -141,7 +147,6 @@ h1 {
 }
 
 h2 {
-  text-align: center;
   font-size: 30px;
   margin: 5% 0 1% 0;
 }
@@ -180,8 +185,8 @@ h2:after {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 4px solid #b2364a;
   margin: 0 5%;
+  border-bottom: 4px solid #b2364a;
 }
 
 .testimonial-img-1 {
@@ -205,7 +210,6 @@ h2:after {
   font-size: 24px;
   font-weight: bold;
   text-transform: capitalize;
-  margin: 0;
 }
 .title-padding .post {
   display: block;
