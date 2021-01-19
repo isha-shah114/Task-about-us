@@ -1,42 +1,45 @@
-@import 'variable';
+//imported mixin partial fie to use mixin function for border radius
+@import 'mixin';
 
+/***************************** Custom grid style for the web page *****************************/
+
+//class for margin adn padding of flex boxes
 .border-box {
     padding: 8%;
     text-align: justify;
     margin: 4%;
 }
-
 .row {
     display: flex;
     flex-wrap: wrap;
 
+    //for loop to display more than one columns and iterate upto 12
     @for $i from 1 to $columns {
         .col-#{$i} {
             flex: 0 0 100% / $columns * $i;
         }
     }
-
-    @mixin border-radius ($r) {
-        border-radius: $r; 
-    }
-
+    //class for all odd flex boxes with color grey
     .background-odd {
         background-color: $background-odd;
         color: $font-color-white;
+        transition: 0.5s;
+        //mixin for bottom border under h2 heading
         @include border-radius(10px);
-
         &:hover {
             box-shadow: 5px 5px 8px $box-shadow;
         }
     }
-
+    //class for all even flex boxes with color pink
     .background-even {
         background-color: $background-even;
-        box-shadow: 5px 5px 8px grey;
-
+        box-shadow: 5px 5px 8px $box-shadow;
+        transition: 0.5s;
         &:hover {
             box-shadow: 0 0 0;
+            //mixin for bottom border under h2 heading
             @include border-radius(10px);
         }
     }
 }
+/***************************** Custom grid style for the web page *****************************/

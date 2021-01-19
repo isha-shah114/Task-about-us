@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/***************************** Custom grid style for the web page *****************************/
 .border-box {
   padding: 8%;
   text-align: justify;
@@ -45,6 +46,7 @@
 .row .background-odd {
   background-color: #4e4e4e;
   color: #fff;
+  transition: 0.3s;
   border-radius: 10px;
 }
 .row .background-odd:hover {
@@ -53,72 +55,15 @@
 .row .background-even {
   background-color: pink;
   box-shadow: 5px 5px 8px grey;
+  transition: 0.3s;
 }
 .row .background-even:hover {
   box-shadow: 0 0 0;
   border-radius: 10px;
 }
 
-.border-box {
-  padding: 8%;
-  text-align: justify;
-  margin: 4%;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-.row .col-1 {
-  flex: 0 0 8.3333333333%;
-}
-.row .col-2 {
-  flex: 0 0 16.6666666667%;
-}
-.row .col-3 {
-  flex: 0 0 25%;
-}
-.row .col-4 {
-  flex: 0 0 33.3333333333%;
-}
-.row .col-5 {
-  flex: 0 0 41.6666666667%;
-}
-.row .col-6 {
-  flex: 0 0 50%;
-}
-.row .col-7 {
-  flex: 0 0 58.3333333333%;
-}
-.row .col-8 {
-  flex: 0 0 66.6666666667%;
-}
-.row .col-9 {
-  flex: 0 0 75%;
-}
-.row .col-10 {
-  flex: 0 0 83.3333333333%;
-}
-.row .col-11 {
-  flex: 0 0 91.6666666667%;
-}
-.row .background-odd {
-  background-color: #4e4e4e;
-  color: #fff;
-  border-radius: 10px;
-}
-.row .background-odd:hover {
-  box-shadow: 5px 5px 8px grey;
-}
-.row .background-even {
-  background-color: pink;
-  box-shadow: 5px 5px 8px grey;
-}
-.row .background-even:hover {
-  box-shadow: 0 0 0;
-  border-radius: 10px;
-}
-
+/***************************** Custom grid style for the web page *****************************/
+/***************************** Footer style for the web page *****************************/
 footer {
   position: relative;
   left: 0;
@@ -128,51 +73,49 @@ footer {
   color: #999999;
   margin-top: 5%;
 }
-
-h4 {
+footer h4 {
   color: pink;
 }
-
-.content-ml {
+footer .content-ml {
   margin-left: 25%;
 }
-
-p {
+footer p {
   line-height: 24px;
 }
-
-ul {
+footer ul {
   list-style-type: none;
   margin-left: -15%;
   line-height: 24px;
 }
-
-.social-li {
+footer ul li:hover {
+  color: pink;
+  cursor: pointer;
+}
+footer .social-li {
   display: inline;
 }
-
-.social-media-icons {
+footer .social-li .social-media-icons {
   background-color: #999999;
   padding: 2% 3%;
   border-radius: 5px;
   margin: 0 2%;
-  color: pink;
+  color: #363636;
 }
-
-.copyright {
+footer .social-li .social-media-icons:hover {
+  color: pink;
+  cursor: pointer;
+}
+footer .copyright {
   background-color: #363636;
   color: #999999;
   text-align: center;
   width: 100%;
 }
 
+/***************************** Footer style for the web page *****************************/
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-a {
-  color: #1c1e1f;
 }
 
 .container-fluid {
@@ -185,20 +128,23 @@ a {
   width: 100%;
 }
 
+/***************************** Common style for the web page *****************************/
 h1 {
+  margin: 0;
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 4rem;
+  font-size: 60px;
 }
 
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 30px;
   margin: 5% 0 1% 0;
 }
-
 h2:after {
   content: "";
   width: 7%;
@@ -208,6 +154,8 @@ h2:after {
   border-bottom: 4px solid #b2364a;
 }
 
+/***************************** Common style for the web page *****************************/
+/********************************* Style for testimonial ********************************/
 .description {
   background: #e6e6e6;
   font-size: 14px;
@@ -219,7 +167,6 @@ h2:after {
   border-bottom-left-radius: 70px;
   color: #363636;
 }
-
 .description:before {
   content: "";
   font-family: "Font Awesome 5 Free";
@@ -227,6 +174,24 @@ h2:after {
   position: absolute;
   top: 0;
   left: -15px;
+}
+
+.testimonial-img, .testimonial-img-2, .testimonial-img-1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #b2364a;
+  margin: 0 5%;
+}
+
+.testimonial-img-1 {
+  background: url("../assets/testimonial-1.jpg") no-repeat;
+  background-size: cover;
+}
+
+.testimonial-img-2 {
+  background: url("../assets/testimonial-2.jpeg") no-repeat;
+  background-size: cover;
 }
 
 .title-padding {
@@ -244,25 +209,9 @@ h2:after {
 }
 .title-padding .post {
   display: block;
-  font-size: 15px;
+  font-size: 14px;
 }
 
-.client-img, .client-img-2, .client-img-1 {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 4px solid #b2364a;
-  margin: 0 5%;
-}
-
-.client-img-1 {
-  background: url("../assets/client-1.jpg") no-repeat;
-  background-size: cover;
-}
-
-.client-img-2 {
-  background: url("../assets/client-2.jpeg") no-repeat;
-  background-size: cover;
-}
+/********************************* Style for testimonial ********************************/
 
 /*# sourceMappingURL=style.css.map */

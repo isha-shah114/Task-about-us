@@ -1,87 +1,71 @@
-@import 'variable', 'grid', 'footer';
+//imported all partial fies required
+@import 'variable', 'grid', 'mixin', 'footer';
 
 body { 
     margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    font-family: $font-family-roboto; 
 }
-a { color: #1c1e1f; }
-
 .container-fluid{
   padding-right: 0;
   padding-left: 0;
 }
+//height and width of the banner image for the page
 .banner-image { 
     height: 625px; 
     width: 100%;
 }
-h1 {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    color: $font-color-white;
-    font-size: 4rem;
-}
 
+/***************************** Common style for the web page *****************************/
+h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: $font-color-white;
+    font-size: $font-size-60px;
+}
 h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: $font-size-30px;
     margin: 5% 0 1% 0;
-}
 
-@mixin border-bottom-color () {
-    border-bottom: 4px solid $border-color;
+    &:after {
+        content: "";
+        width: 7%;
+        position: absolute;
+        left: 46%;
+        padding-top: 2.5%;
+        //mixin for bottom border under h2 heading
+        @include border-bottom-color(4px, solid, $border-color);
+    }
 }
+/***************************** Common style for the web page *****************************/
 
-h2:after {
-    content: "";
-    width: 7%;
-    position: absolute;
-    left: 46%;
-    padding-top: 2.5%;
-    @include border-bottom-color();
-}
-
-@mixin border-radius-color () {
-    border-top-right-radius: 70px;
-    border-bottom-left-radius: 70px;
-    color: $font-color-black;
-}
-
+/********************************* Style for testimonial ********************************/
 .description {
     background: $testimonial-bg;
-    font-size: 14px;
+    font-size: $font-size-14px;
     line-height: 26px;
     text-indent: 30px;
     position: relative;
-    @include border-bottom-color();
-    @include border-radius-color();
-}
-.description:before {
-    content: "\f10d";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    top: 0;
-    left: -15px;
-}
-.title-padding {
-    margin: 0.5% 0 0 5%;
-    position: absolute;
+    //mixin for bottom border under h2 heading
+    @include border-bottom-color(4px, solid, $border-color);
+    //mixin for bottom border under testimonial description box
+    @include border-radius-color(70px, $font-color-black);
 
-    .title {
-        font-size: 24px;
-        font-weight: bold;
-        text-transform: capitalize;
-        margin: 0;
+    &:before {
+        content: "\f10d";
+        font-family: $font-family-fontawesome;
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        left: -15px;
     }
-    .post {
-        display: block;
-        font-size: 15px;
-    }
-    @include border-radius-color();
 }
 
-.client-img {
+.testimonial-img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -89,13 +73,32 @@ h2:after {
     margin: 0 5%;
 }
 
-.client-img-1 { 
-    @extend .client-img;
-    background: url("../assets/client-1.jpg") no-repeat; 
+.testimonial-img-1 { 
+    @extend .testimonial-img;
+    background: url("../assets/testimonial-1.jpg") no-repeat; 
     background-size: cover;
 }
-.client-img-2 { 
-    @extend .client-img;
-    background: url("../assets/client-2.jpeg") no-repeat; 
+.testimonial-img-2 { 
+    @extend .testimonial-img;
+    background: url("../assets/testimonial-2.jpeg") no-repeat; 
     background-size: cover;
 }
+
+.title-padding {
+    margin: 0.5% 0 0 5%;
+    position: absolute;
+
+    .title {
+        font-size: $font-size-24px;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin: 0;
+    }
+    .post {
+        display: block;
+        font-size: $font-size-14px;
+    }
+    //mixin for bottom border under testimonial description box
+    @include border-radius-color(70px, $font-color-black);
+}
+/********************************* Style for testimonial ********************************/

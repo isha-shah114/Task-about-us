@@ -1,15 +1,22 @@
-$font-color-white: #fff; //font color for flex-box and header tag
+$font-color-white: #fff; //font color for flex-box and heading
+$font-size-60px: 60px; //font size for heading
 $border-color:  #b2364a; //border color for whole page
+$font-family-roboto: Roboto, "Helvetica Neue", sans-serif; //font-family for whole web page
+
 
 //flex box properties from grid.scss
 $columns: 12; //total columns of page
 $background-odd: #4e4e4e; //background color for odd flex boxes
 $background-even: pink; //background color for even flex boxes
 $box-shadow: grey; //color for shadow of flex boxes
+$font-size-30px: 30px; //font size for custom grid heading
 
 //testimonial properties
 $testimonial-bg: #e6e6e6; //background color for testimonial box
 $font-color-black: #363636; //font color for testimonial description
+$font-size-14px: 14px; //font size for testimonial description
+$font-size-24px: 24px; //font size for testimonial name title
+$font-family-fontawesome: "Font Awesome 5 Free"; //font-family for testimonial icon
 
 //footer properties
 $footer-font-color: #999999; //font color for footer content

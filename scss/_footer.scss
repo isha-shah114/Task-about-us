@@ -1,5 +1,4 @@
-@import 'grid' , 'variable';
-
+/***************************** Footer style for the web page *****************************/
 footer {
     position: relative;
     left: 0;
@@ -8,34 +7,49 @@ footer {
     background-color: $background-odd;
     color: $footer-font-color;
     margin-top: 5%;
+
+    h4 { color: $background-even;}
+    //class for moving content of second column towards left
+    .content-ml {
+        margin-left: 25%;
+    }
+    p { line-height: 24px;}
+    ul { 
+        list-style-type: none;
+        margin-left: -15%;
+        line-height: 24px; 
+
+        li {
+            transition: 0.4s;
+            &:hover {
+                color: $background-even;
+                cursor: pointer;
+            }
+        }
+    }
+    //class for all social media icons to display it in inline
+    .social-li { 
+        display:inline; 
+
+        .social-media-icons {
+            background-color: $footer-font-color;
+            padding: 2% 3%;
+            border-radius: 5px;
+            margin: 0 2%;
+            color: $font-color-black;
+            transition: 0.4s;
+
+            &:hover {
+                color: $background-even;
+                cursor: pointer;
+            }
+        }
+    }
+    .copyright {
+        background-color: $font-color-black;
+        color: $footer-font-color;
+        text-align: center;
+        width: 100%;
+    }
 }
-
-h4 { color: $background-even;}
-
-.content-ml {
-    margin-left: 25%;
-}
-
-p { line-height: 24px;}
-
-ul { 
-    list-style-type: none;
-    margin-left: -15%;
-    line-height: 24px;  
-}
-.social-li { display:inline; }
-
-.social-media-icons {
-    background-color: $footer-font-color;
-    padding: 2% 3%;
-    border-radius: 5px;
-    margin: 0 2%;
-    color: $background-even;
-}
-
-.copyright {
-    background-color: $font-color-black;
-    color: $footer-font-color;
-    text-align: center;
-    width: 100%;
-}
+/***************************** Footer style for the web page *****************************/
