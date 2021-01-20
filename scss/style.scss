@@ -100,11 +100,38 @@ h2 {
 /********************************* Style for testimonial ********************************/
 
 /********************************* Responsiveness ********************************/
-@media only screen and (min-width: 1025px) and (max-width: 1920px) {
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
     h2 { 
         font-size: $font-size-20px;
         &:after {
-            padding-top: 2.3%; 
+            padding-top: 1.3%;
+            width: 4%;
+            left: 48%; 
+        }
+    } 
+    .title-padding {
+        margin: 0.5% 0 0 6%;
+    }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+    h2 { 
+        font-size: $font-size-20px;
+        &:after {
+            padding-top: 1.6%;
+            width: 4%;
+            left: 48%; 
+        }
+    } 
+    .title-padding {
+        margin: 0.5% 0 0 6%;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    h2 { 
+        font-size: $font-size-20px;
+        &:after {
+            padding-top: 2.3%;
+            
         }
     } 
     .title-padding {
