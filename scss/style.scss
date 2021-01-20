@@ -10,7 +10,7 @@ body {
 }
 //height and width of the banner image for the page
 .banner-image { 
-    height: 625px; 
+    height: auto; 
 }
 
 /***************************** Common style for the web page *****************************/
@@ -98,3 +98,245 @@ h2 {
     @include border-radius-color(70px, $font-color-black);
 }
 /********************************* Style for testimonial ********************************/
+
+/********************************* Responsiveness ********************************/
+@include responsive (tablet-large) {
+    h1 { top: 20%; }
+    h2 { 
+        &:after {
+            padding-top: 3.8%;
+            width: 12%;
+            left: 44%;
+        }
+    }
+    .border-box {
+        font-size: small;
+        text-align: center;
+    }
+    .description { 
+        line-height: 15px;
+     }
+    .title-padding {
+        margin: 0.5% 0 0 6%;
+    }
+    footer {
+        .border-box {
+            margin: 0;
+            padding: 0 8%;
+        }
+        //class for moving content of second column towards left
+        .content-ml { margin-left: 0; }
+        p { 
+            line-height: 12px;
+            font-size: smaller;
+        }
+        ul { 
+            line-height: 12px; 
+            margin-left: -40px;
+            font-size: smaller;
+        }
+    } 
+    .copyright {
+        font-size: smaller;
+    }    
+}
+@include responsive (tablet) {
+    h1 { top: 20%; }
+    h2 { 
+        &:after {
+            padding-top: 3.8%;
+            width: 12%;
+            left: 44%;
+        }
+    }
+    .border-box {
+        font-size: small;
+        text-align: center;
+    }
+    .description { 
+        line-height: 15px;
+     }
+    .testimonial-img {
+        width: 30px;
+        height: 30px;
+    }
+    .title-padding {
+        .title { font-size: $font-size-14px; }
+        .post { font-size: $font-size-8px; }
+    }
+    footer {
+        .border-box {
+            margin: 0;
+            padding: 0 8%;
+        }
+        //class for moving content of second column towards left
+        .content-ml { margin-left: 0; }
+        p { 
+            line-height: 12px;
+            font-size: $font-size-x-small;
+        }
+        ul { 
+            line-height: 12px; 
+            margin-left: -40px;
+            font-size: $font-size-x-small;
+        }
+    } 
+    .copyright {
+        font-size: smaller;
+    }    
+}
+@include responsive (surface) {
+    h1 { 
+        font-size: $font-size-50px;
+        top: 20%; 
+    }
+    h2 { 
+        &:after {
+            padding-top: 5.8%;
+            width: 12%;
+            left: 44%;
+        }
+    }
+    .border-box {
+        font-size: small;
+        text-align: center;
+    }
+    .description { 
+        line-height: 15px;
+     }
+    .testimonial-img {
+        width: 30px;
+        height: 30px;
+    }
+    .title-padding {
+        margin: 1.5% 0 0 7%;
+        .title { font-size: $font-size-14px; }
+        .post { font-size: $font-size-8px; }
+    }
+    footer {
+        .border-box {
+            margin: 0;
+            padding: 0 8%;
+        }
+        //class for moving content of second column towards left
+        .content-ml { margin-left: 0; }
+        p { 
+            line-height: 12px;
+            font-size: $font-size-x-small;
+        }
+        ul { 
+            line-height: 12px; 
+            margin-left: -40px;
+            font-size: $font-size-x-small;
+        }
+    } 
+    .copyright {
+        font-size: smaller;
+    }    
+}
+@include responsive (phone) {
+    h1 { 
+        font-size: $font-size-30px;
+        top: 16%;
+    }
+    h2 { 
+        font-size: $font-size-20px;
+        &:after {
+            padding-top: 5.8%;
+            width: 12%;
+            left: 44%;
+        }
+    }
+    .border-box {
+        font-size: xx-small;
+        text-align: center;
+    }
+    .description { 
+        line-height: 12px;
+        padding: 11%;
+     }
+    .testimonial-img {
+        width: 30px;
+        height: 30px;
+    }
+    .title-padding {
+        margin: 1.5% 0 0 10%;
+        .title { font-size: $font-size-12px; }
+        .post { font-size: $font-size-8px; }
+    }
+    footer {
+        .border-box {
+            margin: 0;
+            padding: 0 8%;
+        }
+        //class for moving content of second column towards left
+        .content-ml { margin-left: 0; }
+        p { 
+            line-height: 12px;
+            font-size: $font-size-x-small;
+        }
+        ul { 
+            line-height: 12px; 
+            margin-left: -40px;
+            font-size: $font-size-x-small;
+        }
+    } 
+    .copyright {
+        font-size: smaller;
+    }    
+}
+@include responsive (mini-phone) {
+    h1 { 
+        font-size: $font-size-30px;
+        top: 16%;
+    }
+    h2 { 
+        font-size: $font-size-20px;
+        &:after {
+            padding-top: 5.8%;
+            width: 12%;
+            left: 44%;
+        }
+    }
+    .border-box {
+        font-size: xx-small;
+        text-align: center;
+    }
+    .description { 
+        line-height: 12px; 
+        padding: 11%;
+    }
+    .testimonial-img {
+        width: 30px;
+        height: 30px;
+    }
+    .title-padding {
+        margin: 1.5% 0 0 10%;
+        .title { font-size: $font-size-12px; }
+        .post { font-size: $font-size-8px; }
+    }
+    footer {
+        //class for moving content of second column towards left
+        .border-box {
+            margin: 0;
+            padding: 0 8%;
+        }
+        .content-ml {
+            margin-left: 0;
+        }
+        p { 
+            line-height: 12px;
+            font-size: $font-size-x-small;
+        }
+        ul { 
+            line-height: 12px; 
+            margin-left: -40px;
+            font-size: $font-size-x-small;
+        }
+    } 
+    .copyright {
+        font-size: smaller;
+    }    
+}
+
+/********************************* Responsiveness ********************************/

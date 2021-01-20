@@ -12,11 +12,49 @@
     flex-wrap: wrap;
 
     //for loop to display more than one columns and iterate upto 12
-    @for $i from 1 to $columns {
-        .col-#{$i} {
-            flex: 0 0 100% / $columns * $i;
+    @include responsive (large-desktop) {
+        @for $i from 1 to $columns {
+             .col-xl-#{$i} {
+                 flex: 0 0 100% / $columns * $i;
+             }
+         }
+    }
+    @include responsive (desktop) {
+       @for $i from 1 to $columns {
+            .col-xl-#{$i} {
+                flex: 0 0 100% / $columns * $i;
+            }
         }
     }
+    @include responsive (tablet-large) {
+        @for $i from 1 to $columns {
+            .col-lg-#{$i} {
+                flex: 0 0 100% / $columns * $i;
+            }
+        }
+    }
+    @include responsive (tablet) {
+        @for $i from 1 to $columns {
+            .col-md-#{$i} {
+                flex: 0 0 100% / $columns * $i;
+            }
+        } 
+    }
+    @include responsive (phone) { 
+        @for $i from 1 to $columns {
+            .col-sm-#{$i} {
+                flex: 0 0 100% / $columns * $i;
+            }
+        } 
+    }
+    @include responsive (mini-phone) { 
+        @for $i from 1 to $columns {
+            .col-sm-#{$i} {
+                flex: 0 0 100% / $columns * $i;
+            }
+        } 
+    }
+    
     //class for all odd flex boxes with color grey
     .background-odd {
         background-color: $background-odd;
