@@ -14,28 +14,3 @@
     border-bottom-left-radius: $radius;
     color: $color;
 }
-
-//mixin for breakpoints
-@mixin responsive ($breakpoint) {
-    @if $breakpoint == large-desktop {
-        @media only screen and (max-width : 1800px) { @content; }
-    }
-    @if $breakpoint == desktop {
-        @media only screen and (max-width : 1400px) { @content; }
-    }
-    @if $breakpoint == tablet-large {
-        @media only screen and (max-width : 1024px) { @content; }
-    }
-    @if $breakpoint == tablet {
-        @media only screen and (max-width : 768px) { @content; }
-    }
-    @if $breakpoint == surface {
-        @media only screen and (max-width : 540px) { @content; }
-    }
-    @if $breakpoint == phone {
-        @media only screen and (max-width : 480px) { @content; }
-    }
-    @if $breakpoint == mini-phone {
-        @media only screen and (max-width : 360px) { @content; }
-    }
-}

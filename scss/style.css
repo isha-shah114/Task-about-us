@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-@media only screen and (max-width: 1800px) {
+@media (max-width: 1800px) {
   .row .col-xl-1 {
     flex: 0 0 8.3333333333%;
   }
@@ -44,8 +44,11 @@
   .row .col-xl-11 {
     flex: 0 0 91.6666666667%;
   }
+  .row .col-xl-12 {
+    flex: 0 0 100%;
+  }
 }
-@media only screen and (max-width: 1400px) {
+@media (max-width: 1400px) {
   .row .col-xl-1 {
     flex: 0 0 8.3333333333%;
   }
@@ -79,8 +82,11 @@
   .row .col-xl-11 {
     flex: 0 0 91.6666666667%;
   }
+  .row .col-xl-12 {
+    flex: 0 0 100%;
+  }
 }
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .row .col-lg-1 {
     flex: 0 0 8.3333333333%;
   }
@@ -114,8 +120,11 @@
   .row .col-lg-11 {
     flex: 0 0 91.6666666667%;
   }
+  .row .col-lg-12 {
+    flex: 0 0 100%;
+  }
 }
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .row .col-md-1 {
     flex: 0 0 8.3333333333%;
   }
@@ -149,8 +158,11 @@
   .row .col-md-11 {
     flex: 0 0 91.6666666667%;
   }
+  .row .col-md-12 {
+    flex: 0 0 100%;
+  }
 }
-@media only screen and (max-width: 480px) {
+@media (max-width: 540px) {
   .row .col-sm-1 {
     flex: 0 0 8.3333333333%;
   }
@@ -184,8 +196,11 @@
   .row .col-sm-11 {
     flex: 0 0 91.6666666667%;
   }
+  .row .col-sm-12 {
+    flex: 0 0 100%;
+  }
 }
-@media only screen and (max-width: 360px) {
+@media (max-width: 480px) {
   .row .col-sm-1 {
     flex: 0 0 8.3333333333%;
   }
@@ -218,6 +233,47 @@
   }
   .row .col-sm-11 {
     flex: 0 0 91.6666666667%;
+  }
+  .row .col-sm-12 {
+    flex: 0 0 100%;
+  }
+}
+@media (max-width: 360px) {
+  .row .col-xs-1 {
+    flex: 0 0 8.3333333333%;
+  }
+  .row .col-xs-2 {
+    flex: 0 0 16.6666666667%;
+  }
+  .row .col-xs-3 {
+    flex: 0 0 25%;
+  }
+  .row .col-xs-4 {
+    flex: 0 0 33.3333333333%;
+  }
+  .row .col-xs-5 {
+    flex: 0 0 41.6666666667%;
+  }
+  .row .col-xs-6 {
+    flex: 0 0 50%;
+  }
+  .row .col-xs-7 {
+    flex: 0 0 58.3333333333%;
+  }
+  .row .col-xs-8 {
+    flex: 0 0 66.6666666667%;
+  }
+  .row .col-xs-9 {
+    flex: 0 0 75%;
+  }
+  .row .col-xs-10 {
+    flex: 0 0 83.3333333333%;
+  }
+  .row .col-xs-11 {
+    flex: 0 0 91.6666666667%;
+  }
+  .row .col-xs-12 {
+    flex: 0 0 100%;
   }
 }
 .row .background-odd {
@@ -395,7 +451,19 @@ h2:after {
 
 /********************************* Style for testimonial ********************************/
 /********************************* Responsiveness ********************************/
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1025px) and (max-width: 1920px) {
+  h2 {
+    font-size: 20px;
+  }
+  h2:after {
+    padding-top: 2.3%;
+  }
+
+  .title-padding {
+    margin: 0.5% 0 0 6%;
+  }
+}
+@media (max-width: 1024px) {
   h1 {
     top: 20%;
   }
@@ -440,7 +508,7 @@ h2:after {
     font-size: smaller;
   }
 }
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   h1 {
     top: 20%;
   }
@@ -493,7 +561,7 @@ h2:after {
     font-size: smaller;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (min-width: 540px) and (max-width: 767px) {
   h1 {
     font-size: 50px;
     top: 20%;
@@ -550,7 +618,32 @@ h2:after {
     font-size: smaller;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 481px) and (max-width: 539px) {
+  h1 {
+    font-size: 30px;
+    top: 16%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  h2:after {
+    padding-top: 5.8%;
+    width: 12%;
+    left: 44%;
+  }
+
+  .title-padding {
+    margin: 1.5% 0 0 7%;
+  }
+  .title-padding .title {
+    font-size: 12px;
+  }
+  .title-padding .post {
+    font-size: 8px;
+  }
+}
+@media only screen and (min-width: 361px) and (max-width: 480px) {
   h1 {
     font-size: 30px;
     top: 16%;
@@ -611,7 +704,7 @@ h2:after {
     font-size: smaller;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (min-width: 320px) and (max-width: 360px) {
   h1 {
     font-size: 30px;
     top: 16%;
@@ -621,13 +714,13 @@ h2:after {
     font-size: 20px;
   }
   h2:after {
-    padding-top: 5.8%;
+    padding-top: 6.5%;
     width: 12%;
     left: 44%;
   }
 
   .border-box {
-    font-size: xx-small;
+    font-size: x-small;
     text-align: center;
   }
 

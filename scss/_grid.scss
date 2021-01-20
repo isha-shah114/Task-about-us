@@ -12,44 +12,51 @@
     flex-wrap: wrap;
 
     //for loop to display more than one columns and iterate upto 12
-    @include responsive (large-desktop) {
-        @for $i from 1 to $columns {
+    @media (max-width: 1800px) {
+        @for $i from 1 through $columns {
              .col-xl-#{$i} {
                  flex: 0 0 100% / $columns * $i;
              }
          }
     }
-    @include responsive (desktop) {
-       @for $i from 1 to $columns {
+    @media (max-width: 1400px) {
+       @for $i from 1 through $columns {
             .col-xl-#{$i} {
                 flex: 0 0 100% / $columns * $i;
             }
         }
     }
-    @include responsive (tablet-large) {
-        @for $i from 1 to $columns {
+    @media (max-width: 1024px) {
+        @for $i from 1 through $columns {
             .col-lg-#{$i} {
                 flex: 0 0 100% / $columns * $i;
             }
         }
     }
-    @include responsive (tablet) {
-        @for $i from 1 to $columns {
+    @media (max-width: 768px) {
+        @for $i from 1 through $columns {
             .col-md-#{$i} {
                 flex: 0 0 100% / $columns * $i;
             }
         } 
     }
-    @include responsive (phone) { 
-        @for $i from 1 to $columns {
+    @media (max-width: 540px) { 
+        @for $i from 1 through $columns {
             .col-sm-#{$i} {
                 flex: 0 0 100% / $columns * $i;
             }
         } 
     }
-    @include responsive (mini-phone) { 
-        @for $i from 1 to $columns {
+    @media (max-width: 480px) { 
+        @for $i from 1 through $columns {
             .col-sm-#{$i} {
+                flex: 0 0 100% / $columns * $i;
+            }
+        } 
+    }
+    @media (max-width: 360px) { 
+        @for $i from 1 through $columns {
+            .col-xs-#{$i} {
                 flex: 0 0 100% / $columns * $i;
             }
         } 
