@@ -312,8 +312,8 @@ footer .copyright {
   transition: 0.4s;
 }
 
-.width-100 {
-  width: 100%;
+.width-100vw {
+  width: 100vw;
 }
 
 /***************************** Common css classes for the web page *****************************/
@@ -327,16 +327,13 @@ body {
 }
 
 .banner-image {
-  height: auto;
+  background: url("../assets/banner.jpg") center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/***************************** Common style for the web page *****************************/
-h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.banner-image h1 {
   color: #fff;
   font-size: 60px;
 }
@@ -354,7 +351,6 @@ h2:after {
   border-bottom: 4px solid #b2364a;
 }
 
-/***************************** Common style for the web page *****************************/
 /********************************* Style for testimonial ********************************/
 .description {
   background: #e6e6e6;
@@ -454,10 +450,6 @@ h2:after {
   }
 }
 @media (max-width: 1024px) {
-  h1 {
-    top: 20%;
-  }
-
   h2:after {
     padding-top: 3.8%;
     width: 12%;
@@ -499,10 +491,6 @@ h2:after {
   }
 }
 @media (max-width: 768px) {
-  h1 {
-    top: 20%;
-  }
-
   h2:after {
     padding-top: 3.8%;
     width: 12%;
@@ -552,9 +540,8 @@ h2:after {
   }
 }
 @media only screen and (min-width: 540px) and (max-width: 767px) {
-  h1 {
-    font-size: 50px;
-    top: 20%;
+  .banner-image h1 {
+    font-size: 30px;
   }
 
   h2:after {
@@ -609,9 +596,8 @@ h2:after {
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 539px) {
-  h1 {
+  .banner-image h1 {
     font-size: 30px;
-    top: 16%;
   }
 
   h2 {
@@ -634,9 +620,8 @@ h2:after {
   }
 }
 @media only screen and (min-width: 361px) and (max-width: 480px) {
-  h1 {
+  .banner-image h1 {
     font-size: 30px;
-    top: 16%;
   }
 
   h2 {
@@ -695,9 +680,8 @@ h2:after {
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 360px) {
-  h1 {
+  .banner-image h1 {
     font-size: 30px;
-    top: 16%;
   }
 
   h2 {
@@ -712,11 +696,12 @@ h2:after {
   .border-box {
     font-size: x-small;
     text-align: center;
+    padding: 5%;
   }
 
   .description {
     line-height: 12px;
-    padding: 11%;
+    padding: 7%;
   }
 
   .testimonial-img, .testimonial-img-1, .testimonial-img-2 {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="scss/style.css">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
@@ -10,8 +10,10 @@
             <!-- Header starts -->
             <div class="row">
                 <!-- banner image for about us -->
-                <img src="assets/banner.jpg" alt="Banner Img" class="banner-image width-100"> 
-                <h1 class="m0">About Us</h1> <!-- title for banner image -->
+                <div class="banner-image width-100vw">
+                    <h1 class="m0 text-center">About Us</h1>
+                </div>
+                 <!-- title for banner image -->
             </div><!-- Header finish -->
             
             <!-- Page body starts -->
@@ -118,11 +120,11 @@
             </div> <!-- testimonial finish -->
 
             <!-- footer starts -->
-            <footer class="width-100">
+            <footer>
                 <div class="container">
                     <div class="row">
                         <!-- about us -->
-                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
                             <div class="border-box">
                                 <h4>About Us</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie, 
@@ -132,7 +134,7 @@
                             </div>
                         </div>
                         <!-- company info -->
-                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
                             <div class="border-box content-ml">
                                 <h4>Company</h4>
                                 <ul>
@@ -144,7 +146,7 @@
                             </div>
                         </div>
                         <!-- contact us -->
-                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
                             <div class="border-box">
                                 <h4>Contact Us</h4>
                                 <ul>
@@ -156,7 +158,7 @@
                             </div>
                         </div>
                         <!-- social media links -->
-                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
                             <div class="border-box">
                                 <h4>Social Media</h4>
                                 <ul>
@@ -175,9 +177,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="copyright text-center width-100">
+                        <div class="copyright text-center width-100vw">
                             <p>Copyright <i class="far fa-copyright"></i> 
                                 <span id="year"></span> Promact Infotech Pvt. Ltd. All Rights Reserved.</p>
                         </div>
